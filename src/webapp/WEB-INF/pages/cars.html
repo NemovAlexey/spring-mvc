@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<a href="/cars?count=1">One car</a>
+<a href="/cars?count=2">Two cars</a>
+<a href="/cars?count=3">Three cars</a>
+<a href="/cars?count=4">Four cars</a>
+<a href="/cars?count=5">Five cars</a>
+<a href="/cars?count=6">More than five cars</a>
+
+<div>
+    <th:block th:each="car : ${cars}">
+        <h2 th:text="${car}"><br></h2>
+    </th:block>
+</div>
+</body>
+</html>
