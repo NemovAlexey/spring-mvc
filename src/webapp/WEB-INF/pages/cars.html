@@ -5,17 +5,30 @@
     <title>Cars</title>
 </head>
 <body>
-<a href="/cars?count=1">One car</a>
-<a href="/cars?count=2">Two cars</a>
-<a href="/cars?count=3">Three cars</a>
-<a href="/cars?count=4">Four cars</a>
-<a href="/cars?count=5">Five cars</a>
-<a href="/cars?count=6">More than five cars</a>
-
-<div>
+<table th:width="300px" th:border="1" style="border-collapse:collapse;">
+    <tr>
+        <td><a href="/cars?count=1">1 car</a></td>
+        <td><a href="/cars?count=2">2 cars</a></td>
+        <td><a href="/cars?count=3">3 cars</a></td>
+        <td><a href="/cars?count=4">4 cars</a></td>
+        <td><a href="/cars?count=5">5 cars</a></td>
+        <td><a href="/cars?count=6">More</a></td>
+    </tr>
+</table>
+<br>
+<table th:width="300px" th:border="1" style="border-collapse:collapse;">
+    <tr>
+        <td><b>Model</b></td>
+        <td><b>Series</b></td>
+        <td><b>Year</b></td>
+    </tr>
     <th:block th:each="car : ${cars}">
-        <h2 th:text="${car}"><br></h2>
+        <tr>
+            <td th:text="${car.getModel()}">
+            <td th:text="${car.getSeries()}">
+            <td th:text="${car.getYear()}">
+        </tr>
     </th:block>
-</div>
+</table>
 </body>
 </html>
