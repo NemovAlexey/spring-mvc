@@ -15,7 +15,7 @@ public class HelloController {
 		List<String> messages = new ArrayList<>();
 		messages.add("Hello!");
 		messages.add("I'm Spring MVC application");
-		messages.add("5.3.18 version by Mar 31, 2022");
+		messages.add("5.3.37 version by Jun 13, 2024");
 		model.addAttribute("messages", messages);
 		return "index";
 	}
